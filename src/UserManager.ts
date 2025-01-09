@@ -24,11 +24,10 @@ class UserManager {
 
     logout(): void {
         localStorage.removeItem('loggedInUser');
-        // Redirect to login page
         window.location.href = 'login.html';
     }   
 
-    getUsers(): User[] {
+    private getUsers(): User[] {
         return JSON.parse(localStorage.getItem('users') || '[]');
     }
 }

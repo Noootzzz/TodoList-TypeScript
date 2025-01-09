@@ -1,5 +1,5 @@
 import { userManager } from './UserManager.js';
-import { displayTasks } from './DisplayTasks.js';
+import { taskManager } from './TaskManager.js';
 
 const loginForm = document.getElementById('login-form') as HTMLFormElement;
 

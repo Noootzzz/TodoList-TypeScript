@@ -20,7 +20,6 @@ class UserManager {
     }
     logout() {
         localStorage.removeItem('loggedInUser');
-        // Redirect to login page
         window.location.href = 'login.html';
     }
     getUsers() {

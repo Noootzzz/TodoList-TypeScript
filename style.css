@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.task-card {
+    margin-top: 2rem;
+    border: 2px solid #202632;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.invalid, .delete {
+    background-color: #d11040;
+    border: 0;
+}
+button, a {
+    font-weight: bold;
+}

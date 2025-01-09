@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Barre de Navigation -->
@@ -13,8 +14,8 @@
             <li><strong>Todo List</strong></li>
         </ul>
         <ul>
-            <li><a href="register.html">Inscription</a></li>
-            <li><a href="login.html">Connexion</a></li>
+            <li><a href="register.html" class="secondary">Inscription</a></li>
+            <li><a href="#" role="button" class="secondary invalid" id="logout-button">Déconnexion</a></li>
         </ul>
     </nav>
     <!-- Section Inscription -->
@@ -34,7 +35,7 @@
     
     <!-- Footer -->
     <footer class="container">
-        <small>&copy; 2025 Todo-List • <a href="#">Mentions légales</a></small>
+        <small>&copy; 2025 Todo-List</small>
     </footer>
 
     <script src="./js/login.js" type="module"></script>
