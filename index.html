@@ -5,8 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+        .task-card {
+            margin-top: 2rem;
+            border: 2px solid #202632;
+            padding: 2rem;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Barre de Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Todo List</strong></li>
+        </ul>
+        <ul>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li><a href="logout.html" role="button">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Liste des Tâches -->
+    <section class="container">
+        <h2>Vos Tâches</h2>
+        <div class="grid">
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Première tâche</h3>
+                <p>Ceci est la première tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+
+            <div class="task-card">
+                <kbd>Deadline : 10/02/2025</kbd>
+                <h3>Deuxième tâche</h3>
+                <p>Ceci est la deuxième tâche.</p>
+                <div>
+                    <button class="validate">✔ Valider</button>
+                    <button class="delete">❌ Supprimer</button>
+                </div>
+                <i>Non validé</i>
+            </div>
+        </div>
+    </section>
     
+    <!-- Footer -->
+    <footer class="container">
+        <small>&copy; 2025 Todo-List • <a href="#">Mentions légales</a></small>
+    </footer>
 </body>
 </html>
