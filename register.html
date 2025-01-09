@@ -20,15 +20,13 @@
     <!-- Section Inscription -->
     <main class="container">
         <div class="grid">
-            <form action="" method="POST" class="form">
+            <form id="register-form">
                 <hgroup>
                     <h2>Bienvenue</h2>
                     <h3>Inscription</h3>
                 </hgroup>
-                <input type="email" id="email" name="email" placeholder="Adresse Email" required>
-                <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
-                <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
-                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                <input type="text" id="register-username" name="register-username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="register-password" name="register-password" placeholder="Mot de passe" required>
                 <button type="submit">S'inscrire</button>
             </form>
         </div>
@@ -38,5 +36,7 @@
     <footer class="container">
         <small>&copy; 2025 Todo-List • <a href="#">Mentions légales</a></small>
     </footer>
+
+    <script src="./js/register.js" type="module"></script>
 </body>
 </html>

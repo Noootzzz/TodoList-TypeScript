@@ -20,13 +20,13 @@
     <!-- Section Inscription -->
     <main class="container">
         <div class="grid">
-            <form action="" method="POST" class="form">
+            <form id="login-form">
                 <hgroup>
                     <h2>Bienvenue</h2>
                     <h3>Connexion</h3>
                 </hgroup>
-                <input type="email" id="email" name="email" placeholder="Adresse Email" required>
-                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                <input type="text" id="login-username" name="login-username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="login-password" name="login-password" placeholder="Mot de passe" required>
                 <button type="submit">Se connecter</button>
             </form>
         </div>
@@ -36,5 +36,7 @@
     <footer class="container">
         <small>&copy; 2025 Todo-List • <a href="#">Mentions légales</a></small>
     </footer>
+
+    <script src="./js/login.js" type="module"></script>
 </body>
 </html>
