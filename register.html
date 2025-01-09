@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+    <!-- Barre de Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Todo List</strong></li>
+        </ul>
+        <ul>
+            <li><a href="login.html">Connexion</a></li>
+        </ul>
+    </nav>
+    <!-- Section Inscription -->
+    <main class="container">
+        <div class="grid">
+            <form action="" method="POST" class="form">
+                <hgroup>
+                    <h2>Bienvenue</h2>
+                    <h3>Inscription</h3>
+                </hgroup>
+                <input type="email" id="email" name="email" placeholder="Adresse Email" required>
+                <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+                <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

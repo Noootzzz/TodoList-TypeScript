@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "js",
+        "target": "ES2021",
+        "noEmitOnError": false,
+        "strict": true,
+        "moduleResolution": "node"
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
