@@ -30,6 +30,7 @@ kbd {
     background-color: #202632;
     text-align: center;
     margin-bottom: 2rem;
+    font-weight: normal;
 }
 
 .task-card{
@@ -48,4 +49,25 @@ kbd {
 
 .validated i{
     color: #00D26A;
+}
+
+.error {
+    color: #F92F60;
+}
+
+.error-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+}
+.error-div p {
+    margin: 0;
+    padding: 0;
+}
+
+footer.container {
+    padding: 0;
+    margin-top: auto;
 }

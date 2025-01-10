@@ -4,8 +4,9 @@ import { hashPassword } from './hash.js';
 class UserManager {
     register(user: User): boolean {
         const users = this.getUsers();
+        const errorRegisterElement = document.getElementById('error-register-user') as HTMLParagraphElement;
         if (users.find(u => u.username === user.username)) {
-            alert("Ce nom est déjà utilisé.");
+            errorRegisterElement.textContent = "Ce nom est déjà utilisé.";
             return false;
         }
         users.push(user);

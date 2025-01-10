@@ -1,5 +1,7 @@
 import { userManager } from './UserManager.js';
 const loginForm = document.getElementById('login-form');
+const errorLoginElement = document.getElementById('error-login-message');
+export let errorLogin = '';
 loginForm.onsubmit = async (e) => {
     e.preventDefault();
     const username = document.getElementById('login-username').value;
@@ -9,6 +11,7 @@ loginForm.onsubmit = async (e) => {
         window.location.href = 'index.html';
     }
     else {
-        alert("Erreur lors de la connexion.");
+        errorLogin = 'Erreur lors de la connexion, veuillez vérifier vos informations.';
+        errorLoginElement.textContent = errorLogin;
     }
 };

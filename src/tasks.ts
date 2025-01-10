@@ -2,20 +2,14 @@ import { taskManager } from "./TaskManager.js";
 import { Task } from "./interface.js";
 
 const taskForm = document.getElementById('task-form') as HTMLFormElement;
-
-function validateInput(value: string, message: string): boolean {
-    if (!value) {
-        alert(message);
-        return false;
-    }
-    return true;
-}
+const errorTask = document.getElementById('error-task-message') as HTMLParagraphElement;
+let errorTaskMessage: string = '';
 
 taskForm.onsubmit = (e) => {
+    errorTask.textContent = '';
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem('loggedInUser') || '{}');
     if (!user.username) {
-        alert("No user logged in.");
         return;
     }
 
@@ -23,13 +17,10 @@ taskForm.onsubmit = (e) => {
     const description = (document.getElementById('add-task-description') as HTMLTextAreaElement).value;
     const deadline = (document.getElementById('add-task-deadline') as HTMLInputElement).value;
 
-    if (!validateInput(title, "Task title is required.")) return;
-    if (!validateInput(description, "Task description is required.")) return;
-    if (!validateInput(deadline, "Task deadline is required.")) return;
-
     const deadlineDate = new Date(deadline);
     if (isNaN(deadlineDate.getTime()) || deadlineDate < new Date()) {
-        alert("Please enter a valid future date for the deadline.");
+        errorTaskMessage = "Il faut une date futur.";
+        errorTask.textContent = errorTaskMessage;
         return;
     }
 

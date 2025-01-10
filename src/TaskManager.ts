@@ -38,7 +38,7 @@ class TaskManager {
 
         if (tasks.length === 0) {
             const noTaskMessage = document.createElement('p');
-            noTaskMessage.textContent = "Aucune tâche prévu.";
+            noTaskMessage.textContent = "Aucune tâche.";
             taskList.appendChild(noTaskMessage);
             return;
         }
