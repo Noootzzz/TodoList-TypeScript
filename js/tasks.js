@@ -1,6 +1,5 @@
 import { taskManager } from "./TaskManager.js";
 const taskForm = document.getElementById('task-form');
-// Validation Function
 function validateInput(value, message) {
     if (!value) {
         alert(message);
@@ -31,7 +30,6 @@ taskForm.onsubmit = (e) => {
     }
     const task = { id: Date.now().toString(), userId: user.username, title, description, status: false, deadline };
     taskManager.addTask(task);
-    alert("Task added successfully.");
     taskManager.displayTasks();
     taskForm.reset();
 };

@@ -3,7 +3,6 @@ import { Task } from "./interface.js";
 
 const taskForm = document.getElementById('task-form') as HTMLFormElement;
 
-// Validation Function
 function validateInput(value: string, message: string): boolean {
     if (!value) {
         alert(message);
@@ -36,7 +35,6 @@ taskForm.onsubmit = (e) => {
 
     const task: Task = { id: Date.now().toString(), userId: user.username, title, description, status: false, deadline };
     taskManager.addTask(task);
-    alert("Task added successfully.");
     taskManager.displayTasks();
     taskForm.reset();
 };

@@ -12,7 +12,6 @@ class TaskManager {
         const task = tasks.find(t => t.id === taskId);
         if (task) {
             task.status = true;
-            
             localStorage.setItem('tasks', JSON.stringify(tasks));
         }
     }
@@ -43,12 +42,21 @@ class TaskManager {
             taskList.appendChild(noTaskMessage);
             return;
         }
+
+        tasks.sort((task1, task2) => {
+            const statusComparison = Number(task1.status) - Number(task2.status);
+            if (statusComparison === 0) {
+                return new Date(task1.deadline).getTime() - new Date(task2.deadline).getTime();
+            }
+            return statusComparison;
+        });
         
         tasks.forEach(task => {
             const taskCard = document.createElement('div');
             taskCard.className = 'task-card';
 
             taskCard.innerHTML = `
+                <i>${task.status ? '🟢 Fait' : '⭕ À faire'}</i>
                 <kbd>Deadline : ${new Date(task.deadline).toLocaleDateString()}</kbd>
                 <h3>${task.title}</h3>
                 <p>${task.description}</p>
@@ -56,8 +64,11 @@ class TaskManager {
                     <button class="validate" data-id="${task.id}">Valider</button>
                     <button class="delete" data-id="${task.id}">Supprimer</button>
                 </div>
-                <i>${task.status ? 'Validé' : 'Non validé'}</i>
             `;
+
+            if(task.status) {
+                taskCard.classList.add('validated');
+            }
 
             // Event listeners for validate and delete buttons
             taskCard.querySelector('.validate')!.addEventListener('click', () => {

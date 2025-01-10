@@ -18,3 +18,34 @@ button, a {
 ul li {
     list-style: none;
 }
+
+i {
+    color: #F92F60;
+    padding: 0 0 1rem 0;
+    font-style: normal;
+}
+
+kbd {
+    color: #fff;
+    background-color: #202632;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.task-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task-card div{
+    margin-top: auto;
+}
+
+.validated button{
+    display: none;
+}
+
+.validated i{
+    color: #00D26A;
+}

@@ -30,13 +30,3 @@ class UserManager {
 }
 // Utilisation
 export const userManager = new UserManager();
-// S'inscrire
-// userManager.register({username: 'test', password: 'password'});
-// userManager.register({username: 'test2', password: 'password2'});
-// userManager.register({username: 'test3', password: 'password3'});
-// Se connecter
-// userManager.login('test', 'password');
-// userManager.login('test2', 'password2');
-// userManager.login('test3', 'password3'); 
-// Se déconnecter
-// userManager.logout();
