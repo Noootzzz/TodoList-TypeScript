@@ -14,3 +14,7 @@ You can try it out yourself here: <a href="https://noootzzz.github.io/TodoList-T
 - Mark tasks as completed.
 - Delete tasks.
 - Local storage for tasks and accounts using your browser's `localStorage`.
+
+## Authors
+
+- **Nathan Boisleux** (Noootzzz)
