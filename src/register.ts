@@ -12,8 +12,12 @@ registerForm.onsubmit = (e) => {
     const newUser = userManager.register(user);
 
     if (newUser) {
-        alert("Inscription réussie.");
-        window.location.href = 'index.html';
+        // Attempt to log in the user after successful registration
+        if (userManager.login(username, password)) {
+            window.location.href = 'index.html';
+        } else {
+            alert("Inscription réussie, mais erreur lors de la connexion.");
+        }
     } else {
         alert("Erreur lors de l'inscription.");
     }
