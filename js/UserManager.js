@@ -1,3 +1,4 @@
+import { hashPassword } from './hash.js';
 class UserManager {
     register(user) {
         const users = this.getUsers();
@@ -9,9 +10,10 @@ class UserManager {
         localStorage.setItem('users', JSON.stringify(users));
         return true;
     }
-    login(username, password) {
+    async login(username, password) {
         const users = this.getUsers();
-        const user = users.find(u => u.username === username && u.password === password);
+        const hashedPassword = await hashPassword(password);
+        const user = users.find(u => u.username === username && u.password === hashedPassword);
         if (user) {
             localStorage.setItem('loggedInUser', JSON.stringify(user));
             return true;

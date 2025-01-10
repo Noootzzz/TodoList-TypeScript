@@ -1,4 +1,5 @@
 import { User } from './interface.js';
+import { hashPassword } from './hash.js';
 
 class UserManager {
     register(user: User): boolean {
@@ -12,9 +13,10 @@ class UserManager {
         return true;
     }
 
-    login(username: string, password: string): boolean {
+    async login(username: string, password: string): Promise<boolean> {
         const users = this.getUsers();
-        const user = users.find(u => u.username === username && u.password === password);
+        const hashedPassword = await hashPassword(password);
+        const user = users.find(u => u.username === username && u.password === hashedPassword);
         if (user) {
             localStorage.setItem('loggedInUser', JSON.stringify(user));
             return true;
