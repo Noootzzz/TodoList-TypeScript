@@ -15,6 +15,6 @@ You can try it out yourself here: <a href="https://noootzzz.github.io/TodoList-T
 - Delete tasks.
 - Local storage for tasks and accounts using your browser's `localStorage`.
 
-## Authors
+## Author
 
 - **Nathan Boisleux** (Noootzzz)
