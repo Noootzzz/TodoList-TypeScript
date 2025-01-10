@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
         <ul>
             <li><a href="register.html" class="secondary">Inscription</a></li>
             <li><a href="login.html" class="secondary">Connexion</a></li>
-            <li><a href="#" role="button" class="secondary invalid" id="logout-button">Déconnexion</a></li>
+            <li><a href="#" role="button" class="delete" id="logout-button" style="font-weight: bold;">Déconnexion</a></li>
         </ul>
     </nav>
 
@@ -30,7 +30,7 @@
             </hgroup>
             <hgroup>    
                 <input type="date" name="date" id="add-task-deadline" required>
-                <button type="submit" class="primary" style="color: #fff;">Ajouter un tâche</button>
+                <button type="submit" class="primary" style="color: #111;font-weight: bold;">Ajouter un tâche</button>
             </hgroup>
         </form>
         <p class="error" id="error-task-message"></p>

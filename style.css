@@ -20,7 +20,7 @@ ul li {
 }
 
 i {
-    color: #F92F60;
+    color: #d11040;
     padding: 0 0 1rem 0;
     font-style: normal;
 }
@@ -41,6 +41,12 @@ kbd {
 
 .task-card div{
     margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.task-card div button {
+    width: 50%;
 }
 
 .validated button{
@@ -52,7 +58,7 @@ kbd {
 }
 
 .error {
-    color: #F92F60;
+    color: #d11040;
 }
 
 .error-div {
