@@ -4,7 +4,7 @@ An efficient task manager built with TypeScript.
 
 ## Live Demo
 
-You can try it out yourself here: [https://noootzzz.github.io/TodoList-TypeScript/](https://noootzzz.github.io/TodoList-TypeScript/)
+You can try it out yourself here: <a href="https://noootzzz.github.io/TodoList-TypeScript/" target="_blank">https://noootzzz.github.io/TodoList-TypeScript/</a>
 
 ## Features
 
